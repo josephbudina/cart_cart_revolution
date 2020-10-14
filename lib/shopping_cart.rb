@@ -10,4 +10,17 @@ class ShoppingCart
   def add_product(product)
     @products << product
   end
+
+  def details
+  instance_variables.map do |cart|
+      [cart[1..-1].to_sym, instance_variable_get(cart)]
+    end.to_h
+  end
+
+  def total_number_of_products
+
+    poducts.each do |product|
+     
+    end
+ end
 end
